@@ -1,7 +1,8 @@
 ---
-title: My Blog Post
-date: 2023-06-22
-author: John Doe
+title: "First post"
+description: "dummy post"
+pubDate: "Jul 08 2022"
+heroImage: "/placeholder-hero.jpg"
 ---
 
-This is the content of my blog post.
+Hello world
