@@ -52,7 +52,7 @@ _`~/.gitconfig-work`_
 ```
 [user]
 	name = chris-personal
-	email = work@gmail.com
+	email = personal@gmail.com
 [commit]
 	gpgSign = false
 [core]
