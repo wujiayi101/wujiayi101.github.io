@@ -5,7 +5,7 @@ pubDate: "Nov 03 2023"
 ---
 
 # Overview
-Many of us have multiple GitHub accounts, such as a work account and a personal account. Sometimes, we need to work on these accounts on the same machine. In this blog post, we will introduce a clean and safe approach to set up Git, enabling the machine to automatically load the correct git configuration and SSH key when you are working on projects of different GitHub accounts.
+Many of us have multiple GitHub accounts, such as a work account and a personal account. Sometimes, we need to work on these accounts on the same machine. In this blog post, we will introduce a setup that enables the machine to automatically load the right git configuration and SSH key when switching between projects from different GitHub accounts.
 
 # Create Separate Directories for Different GitHub Accounts
 
@@ -21,7 +21,7 @@ For each GitHub account, [generate](https://docs.github.com/en/authentication/co
 
 # Configure `.gitconfig`
 
-If it doesn't exist already, create ``.gitconfig`` file in your `$HOME` folder and add the following content to it. The configuration file is self-explanatory and instructs Git to read a child config file based on the current working directory. You can also include shared configuration in this file.
+If it doesn't exist already, create `.gitconfig` file in your `$HOME` folder and add the following content to it. The configuration file is self-explanatory and instructs Git to read a child config file based on the current working directory. You git also include shared configuration in this file.
 
 
 ```
