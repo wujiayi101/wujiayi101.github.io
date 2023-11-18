@@ -1,7 +1,7 @@
 ---
 title: "Working On Multiple GitHub Accounts"
 description: ""
-pubDate: "Nov 03 2023"
+pubDate: "Nov 03, 2023"
 ---
 
 # Overview

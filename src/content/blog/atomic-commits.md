@@ -1,7 +1,7 @@
 ---
 title: "Writing Atomic Commits"
 description: ""
-pubDate: "Nov 17 2023"
+pubDate: "Nov 17, 2023"
 tags: ["git", "code-review"]
 ---
 
@@ -64,7 +64,9 @@ On the feature branch, run `git reset main` to unstages all the commits
 
 ## 2. Construct the Commit Narratives
 
-Think about the change narratives you want to convey to reviewers and future colleagues. Group the changes into a series of commits, each containing a logical change. It's recommended to use GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code to easily stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
+Think about the change narratives you want to convey to reviewers and future colleagues. 
+
+Group the changes into a series of commits, each containing a logical change. It's recommended to use GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code to easily stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
 
 ## 3. Use a Standard Commit Message Format
 

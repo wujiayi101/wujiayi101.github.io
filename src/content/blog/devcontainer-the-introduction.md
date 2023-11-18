@@ -1,7 +1,7 @@
 ---
 title: "Dev Containers - The Introduction"
 description: ""
-pubDate: "Nov 09 2023"
+pubDate: "Nov 09, 2023"
 tags: ["devcontainers", "vscode", "productivity"]
 ---
 
