@@ -52,7 +52,7 @@ pick 6af4476 Update temp
 
 **👎 Gigantic Commit(s)**
 
-Gigantic commits are often the result of simply squashing changes into one commit before creating a pull request (with the good idention of cleaning up the mess in the previous example), even if the changes are massive. It is difficult to understand a big commit that involves many changes. This should also be considered as an anti-pattern.
+Gigantic commits are often the result of simply squashing changes into one commit before creating a pull request (with the good idention of cleaning up the mess in the previous example), even if the changes are massive. While it looks cleaner to have only one commit to review, it is actuall not helpful for the review process and it should also be considered as an anti-pattern.
 
 # How to Approach Atomic Commits
 
