@@ -48,17 +48,18 @@ Take the above certificate chain as example, the validation process can be summa
 | Root CA | `ISRG Root X1`  | `ISRG Root X1` | N/A, already trusted by default |
 ---
 
-1. Browser retrieve `wu101.com` cert (issued by `R3`)
-1. To validate `wu101.com` cert, browser need the `R3` public key, which is in the `R3` cert
-1. Browser retrieve the `R3` cert (issue by `ISRG Root X1`) 
-1. To validate `R3` cert, browser need the `ISRG Root X1` public key, which is in the `ISRG Root X1` cert
-1. Browser retrieve the `ISRG Root X1` cert (self-signed)
-1. The `ISRG Root X1` cert is already trusted by the browser (see [Chrome trusted store](https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.md)), so there is no need to verify it!
-1. Extract public key from `ISRG Root X1` cert, validate `R3` cert
-1. `R3` cert is validated
-1. Extract public key from `R3` cert, validate `wu101.com` cert
-1. `wu101.com` cert is validated 
-1. The chain of validation process is completed! 🎉🎉🎉
+1. Retrieve `wu101.com` cert (issued by `R3`)
+1. To validate `wu101.com` cert, we need the `R3` public key, which is embedded in the `R3` cert
+1. Retrieve the `R3` cert (issue by `ISRG Root X1`) 
+1. To validate `R3` cert, we need the `ISRG Root X1` public key, which is embedded in the `ISRG Root X1` cert
+1. Retrieve the `ISRG Root X1` cert (self-signed)
+1. Because `ISRG Root X1` cert is in the [Chrome trusted store](https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.md), so it is trustworthy
+1. `ISRG Root X1` is validated ✅
+1. Extract public key from `ISRG Root X1` cert and validate `R3` cert
+1. `R3` cert is validated ✅
+1. Extract public key from `R3` cert and validate `wu101.com` cert
+1. `wu101.com` cert is validated ✅
+1. The chain of validation process is completed! 🎉
 
 ## Trusted Store 
 Root CA certificates are often already trusted by machines and browsers. Machines and browsers are preconfigured with a list of trusted root certificates, also known as trust anchors, stored in a trust store.
