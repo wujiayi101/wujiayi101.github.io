@@ -16,7 +16,7 @@ I found a [16-week training program](https://www.facebook.com/notes/781931189269
 
 ![16-week training](/16-week-training.jpg)
 
-### Low Heart Rate Training
+### Low Heart Rate Training (LHRT)
 During my runs, I focused on keeping my heart rate low (learn more about [low heart rate training](https://www.youtube.com/watch?v=P_VNQ6UIbS8)). This allowed me to run more frequently, recover faster, and avoid injuries. Compared to six months ago, I am now able to run at a much faster pace while maintaining the same low heart rate, which is quite amazing. I used a Garmin watch to monitor my heart rate and set an alarm to alert me if I exceeded my low heart rate threshold, so I could slow down.
 
 
@@ -39,8 +39,11 @@ Despite experiencing knee pain, I successfully completed the marathon in under 5
 
 ![First Marathon Medal](/marathon-medal.jpg)
 
-## More to Come
+## What Have I learned?
 
-Training for a marathon, particularly through the utilization of low heart rate training, has taught me the value of constant improvement, deliberate practice, patience, and perseverance in order to succeed in any long-term endeavor.
+Training for a marathon, particularly through the utilization of low heart rate training, has taught me the value of constant improvement, deliberate practice, patience, and perseverance in order to succeed in any long-term endeavor. Especially when practicing LHRT, you have to let go of your ego and run at a very slow pace. It requires patience to gradually build up mileage and see the effects!
 
-Now that I have completed my first marathon, I know what I need to do in order to improve for the next one. I plan to work on strengthening my core and leg muscles, and potentially lose more weight. My goal is to train regularly and be able to participate in 3 marathons per year! 
+
+## More to come
+
+Now that I have completed my first marathon, I have gained insights into what I need to do to improve for the next one. I plan to focus on strengthening my glute and hip muscles and potentially losing more weight. My goal is to participate in three marathons per year!
