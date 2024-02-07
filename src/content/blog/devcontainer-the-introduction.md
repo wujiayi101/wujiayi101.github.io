@@ -1,11 +1,11 @@
 ---
-title: "Dev Containers - The Introduction"
+title: "Dev Containers"
 description: ""
 pubDate: "Nov 09, 2023"
 tags: ["devcontainers", "vscode", "productivity"]
 ---
 
-# Works on my machine 🤷
+# _Works on my machine_
 
 I worked on a project on and off for a few years. One day, a new colleague joined the project and tried to set it up on his machine. The project is pretty complex to set up, requiring the installation of various software. The Readme seemed to be detailed and up-to-date, but it turned out it wasn't. The colleague spent over a day fixing some weird errors that I couldn't reproduce on my machine. I did the setup a few years back when I onboarded to the project, and it worked, so I never changed the settings again.
 
@@ -15,7 +15,7 @@ I wish there was a tool that could create the same development setup in just one
 
 The [Visual Studio Code Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension allows you to use a Docker container as a full-featured development environment. This helps ensure a consistent environment across developer machines and makes it easy for new team members and contributors to get up and running.
 
-# Wait, do I have to use VS Code? 🤔
+# Do I have to use VS Code? 🤔
 
 Yes, I know what you're thinking. [VS Code is the best IDE](https://containers.dev/supporting#editors) in terms of supporting devcontainers nicely. Trust me, once you appreciate the benefits of devcontainers, switching to VS Code will be a no-brainer.
 
@@ -30,11 +30,11 @@ Yes, I know what you're thinking. [VS Code is the best IDE](https://containers.d
 
 I created a [GoLang project](https://github.com/wujiayi101/devcontainer_demo_golang) to demonstrate the use of devcontainers.
 
-- *Option 1*: Click the "Dev Containers Open" Badge
+- **Option 1**: Click the "Dev Containers Open" Badge
 
     -  This is a truly one-click spin up! This automatically clones the project to a devcontainer volume and launches it in VSCode
 
-- *Option 2*: Open the project in VS Code and open it in devcontainer
+- **Option 2**: Open the project in VS Code and open it in devcontainer
 
     - Manually clone the project to your machine and run `code /path/to/project` to open the project in VS Code. VS Code detects the configurations in `.devcontainer` and prompts you to open the project in the devcontainer:
 

@@ -2,7 +2,7 @@
 title: "Certificates and PKI"
 description: ""
 pubDate: "Nov 25, 2023"
-tags: ["pik", "ssl", "certificate"]
+tags: ["PKI", "SSL", "certificate"]
 ---
 
 ## Understanding Public Key and Private Key

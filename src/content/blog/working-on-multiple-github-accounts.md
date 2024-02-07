@@ -2,6 +2,8 @@
 title: "Working On Multiple GitHub Accounts"
 description: ""
 pubDate: "Nov 03, 2023"
+tags: ["git", "tips", "productivity"]
+
 ---
 
 # Overview

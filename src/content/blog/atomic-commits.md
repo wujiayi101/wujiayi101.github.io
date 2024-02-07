@@ -2,7 +2,7 @@
 title: "Writing Atomic Commits"
 description: ""
 pubDate: "Nov 17, 2023"
-tags: ["git", "code-review"]
+tags: ["git", "code review"]
 ---
 
 # What is an atomic commit?
