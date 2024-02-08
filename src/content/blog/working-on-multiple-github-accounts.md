@@ -7,7 +7,7 @@ tags: ["git", "tips", "productivity"]
 ---
 
 # Overview
-Many of us have multiple GitHub accounts, such as a work account and a personal account. Sometimes, we need to work on these accounts on the same machine. In this blog post, we will introduce a setup that enables the machine to automatically load the right git configuration and SSH key when switching between projects from different GitHub accounts.
+Many of us have multiple GitHub accounts, such as a work account and a personal account. Sometimes, we need to work on these accounts on the same machine. In this blog post, we will introduce a setup that enables the machine to automatically load the right git configuration and SSH key when switching between projects from different GitHub accounts. 
 
 # Create Separate Directories for Different GitHub Accounts
 
@@ -34,8 +34,8 @@ If it doesn't exist already, create `.gitconfig` file in your `$HOME` folder and
 [includeIf "gitdir:~/github/personal/"]
     path = ~/.gitconfig-personal
 ```
-_`~/.gitconfig`_
 
+_`~/.gitconfig`_
 
 Next, create the child config files. Typically, you will have different user names, email addresses, and SSH keys for each GitHub account. These details can be specified in the respective child configs.
 
@@ -61,6 +61,13 @@ _`~/.gitconfig-work`_
     sshCommand = "ssh -i ~/.ssh/personal_key"
 ```
 _`~/.gitconfig-personal`_
+
+
+> ⚠️ **NOTE**
+>
+> If you have to use git inside a [devcontainer](../devcontainer-the-introduction/), this approach will not work because devcontainer does not know how to copy those child configuration files (`~/.gitconfig-*`) to the container. 
+>
+> Read [this](https://github.com/microsoft/vscode-remote-release/issues/2084) for some workaround ideas.
 
 
 # Verify the Setup
