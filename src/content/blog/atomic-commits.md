@@ -7,9 +7,9 @@ tags: ["git", "code review"]
 
 # What is an atomic commit?
 
-In the context of Git, an atomic commit refers to the practice of creating commits that are self-contained and independent units of work. It means bundling all the changes related to a specific task or feature into a single commit, making it the smallest possible unit.
+In the context of Git, an atomic commit refers to the practice of creating commits that are self-contained and independent units of work. It means bundling the changes related to a logic change into a single commit, making it the smallest possible unit.
 
-Even if you have changes in the same file, you should bundle them into different commits if they solve different problems. Each atomic commit represents a complete change that is capable of passing the Continuous Integration (CI) process. If you need more than one commit to pass the CI, those commits are not atomic.
+Changes in the same file could belong to different logical changes, you should bundle them into different commits. Each atomic commit represents a complete change that is capable of passing the Continuous Integration (CI) process. In other words, if you need more than one commit to pass the CI, those commits are not atomic.
 
 
 # Why is atomic commit a good practice?
@@ -66,7 +66,7 @@ On the feature branch, run `git reset main` to unstages all the commits
 
 Think about the change narratives you want to convey to reviewers and future colleagues. 
 
-Group the changes into a series of commits, each containing a logical change. It's recommended to use GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code to easily stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
+Group the changes into a series of commits, each containing a logical change. GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code allows you to stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
 
 ## 3. Use a Standard Commit Message Format
 
