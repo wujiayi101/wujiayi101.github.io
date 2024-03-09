@@ -1,5 +1,5 @@
 ---
-title: "Effective code review (part 2): Giving feedback"
+title: "Effective code review (part 2): giving feedback"
 description: ""
 pubDate: "March 10, 2024"
 tags: ["code-review", "github"]
@@ -19,7 +19,7 @@ Throughout the rest of this post, we will provide examples and tips to elaborate
 
 ## 1. Let machines do the boring part
 
-Automated tools can help identify common issues without causing offense. By leveraging these tools in the CI pipeline, the friction between team members is reduced, allowing code reviewers to focus on reviewing more complex aspects of the code changes.
+Automated tools can help identify common issues in the code. By leveraging these tools in the CI, code reviewers can focus on more complex aspects of the code changes. The friction between team members is reduced because the reviewers do not need to be the annoying one to tell the code author to fix these minor issues.
 
 ![Machine vs Human](/machine-vs-human.png)
 
@@ -96,13 +96,13 @@ When possible, offer genuine praise for well-done aspects of the code. This make
 
 ### 3.7 Use conventional comment format
 
-To make the comment more effective easier to understand, we should write the feedback with the following information:
+A good PR comment should contain the following information:
 
 - The type of comment (bug, nitpick, question, etc.).
 - Whether the issue is a blocker, and whether it can be addressed later on.
 - The details of the feedback.
 
-[Conventional Comment](https://conventionalcomments.org/) is a great framework for writing comments on PRs.
+[Conventional Comment](https://conventionalcomments.org/) is a great framework for framing such information in PRs.
 
 We won't go into detail on this here, but here is a quick example:
 
@@ -110,7 +110,11 @@ We won't go into detail on this here, but here is a quick example:
 >
 > Consider renaming it to `username` for clarity. This can be done in a future PR.
 
-If you write a comment like this, you provide feedback while also telling the author the issue doesn't have to be addressed in this PR. 
+If you write a comment like this, you provide feedback while also telling the author the issue doesn't have to be addressed in this PR. Often times, people receiving feedback are overwhelmed by many feedbacks and they are worried that the reviewers willl be upset if not all feedbacks are addressed.  
+
+### 3.8 Approve as soon as no blockers
+
+You should approve the PR as soon as there is no blocker/critical issues in the PR and trust the author will address other issues in the future. This allows the team to move fast and avoid a standoff in a PR feedback loop.
 
 ## Final thoughts
 
