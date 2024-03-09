@@ -9,7 +9,7 @@ tags: ["git", "tips", "productivity"]
 # Overview
 Many of us have multiple GitHub accounts, such as a work account and a personal account. Sometimes, we need to work on these accounts on the same machine. In this blog post, we will introduce a setup that enables the machine to automatically load the right git configuration and SSH key when switching between projects from different GitHub accounts. 
 
-# Create Separate Directories for Different GitHub Accounts
+# Create separate directories for different GitHub accounts
 
 Create separate directories for each GitHub account. For example:
 
@@ -70,7 +70,7 @@ _`~/.gitconfig-personal`_
 > Read [this](https://github.com/microsoft/vscode-remote-release/issues/2084) for some workaround ideas.
 
 
-# Verify the Setup
+# Verify the setup
 
 Let's verify the setup:
 

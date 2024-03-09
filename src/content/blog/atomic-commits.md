@@ -33,9 +33,9 @@ Grouping changes into atomic commits simplifies the code review process. Code re
 
 ![commit filter](/commit-filter.png)
 
-# Examples to Avoid
+# Examples to avoid
 
-**👎 Messy Commits**
+**👎 Messy commits**
 
 Messy commit histories are often the result of fast local development. Authors may not know how to rewrite commits or may simply be too lazy to do so. It's also possible that authors consciously choose to leave the history messy and rely on [squash merge](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github#squashing-your-merge-commits) to clean up the mess at the end. While this may be convenient for authors, it makes it challenging for reviewers to understand the narrative of the changes when reading the commit history. 
 
@@ -54,21 +54,21 @@ pick 6af4476 Update temp
 
 Gigantic commits are often the result of simply squashing changes into one commit before creating a pull request (with the good idention of cleaning up the mess in the previous example), even if the changes are massive. While it looks cleaner to have only one commit to review, it is actuall not helpful for the review process and it should also be considered as an anti-pattern.
 
-# How to Approach Atomic Commits
+# How to approach atomic commits
 
 While it's acceptable to create quick and dirty commits for fast iteration, it's essential to clean up the commit history into atomic commits. Here's how you can do it:
 
-## 1. Reset All Commits Locally
+## 1. Reset all commits locally
 
 On the feature branch, run `git reset main` to unstages all the commits
 
-## 2. Construct the Commit Narratives
+## 2. Construct the commit narratives
 
 Think about the change narratives you want to convey to reviewers and future colleagues. 
 
 Group the changes into a series of commits, each containing a logical change. GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code allows you to stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
 
-## 3. Use a Standard Commit Message Format
+## 3. Use a standard commit message format
 
 It's important to write commit messages in a standard format to convey the message of what and why the changes were made
 
@@ -103,13 +103,13 @@ You may not need to be as verbose as the example, but you should provide enough 
 
 Occasionally, people adding comments in the pull request to explain the intention of the changes. This may not be necessary if you write clear commit messages.
 
-## 4. Start with a Draft Pull Request
+## 4. Start with a draft pull request
 
 Always review your pull request before sending it to anyone for review. 
 
 Create the pull request as a draft first and skim through the changes using the pull request GUI. It's not uncommon to accidentally push unintended changes, and a draft pull request gives you a chance to fix them before sending them for review. A pull request in the draft state doesn't trigger notifications to reviewers, so you won't waste their time with a potentially unready pull request.
 
-## 5. Finalize and Send for Review
+## 5. Finalize and send for review
 
 Once you're satisfied with the changes and have made any necessary adjustments, you can finalize the pull request and assign it to the appropriate reviewers
 

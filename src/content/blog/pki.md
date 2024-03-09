@@ -5,7 +5,7 @@ pubDate: "Nov 25, 2023"
 tags: ["PKI", "SSL", "certificate"]
 ---
 
-## Understanding Public Key and Private Key
+## Understanding public key and private key
 
 A <ins>public key</ins> is made available to the public and is used for encryption and verifying digital signatures. It is derived from a corresponding private key using complex mathematical algorithms. Public keys are widely distributed and can be freely shared.
 
@@ -21,7 +21,7 @@ The use of public and private keys can be summarized as follows:
 
 Overall, the use of public and private keys in PKI ensures confidentiality, integrity, authenticity, and non-repudiation in digital communications and transactions.
 
-## Certificates and Chain of Trust
+## Certificates and chain of trust
 
 Certificates play a crucial role in establishing trust and verifying the identities of entities in PKI. 
 
@@ -32,7 +32,7 @@ To establish a chain of trust, A root CA certificate needs to be distributed to 
 A root CA is typically <ins>self-signed and kept offline</ins> for security purposes. It is recommended to store the root private keys offline, preferably on specialized hardware connected to an air-gapped machine. The root private key is used infrequently to sign subordinate certificates for subordinate CAs, which often automate the certificate issuance process.
 
 
-## Certificate Validation 
+## Certificate validation 
 
 To validate an <ins>end entity certificate</ins> (also known as a <ins>leaf certificate</ins>), the public key from the issuer's certificate (typically a subordinate CA) is extracted and used to verify the signature on the leaf certificate. Similarly, the legitimacy of a subordinate CA certificate is verified by using the public key from a higher-ranked CA certificate. This process is repeated until the root certificate is reached.
 
@@ -61,7 +61,7 @@ Take the above certificate chain as example, the validation process can be summa
 1. `wu101.com` cert is validated ✅
 1. The chain of validation process is completed! 🎉
 
-## Trusted Store 
+## Trusted store 
 Root CA certificates are often already trusted by machines and browsers. Machines and browsers are preconfigured with a list of trusted root certificates, also known as trust anchors, stored in a trust store.
 
 Examples of some other trusted store
@@ -69,7 +69,7 @@ Examples of some other trusted store
 - [List of available trusted root certificates in macOS High Sierra](https://support.apple.com/kb/HT208127)
 - [List of available trusted root certificates in macOS Sierra](https://support.apple.com/kb/HT207189)
 
-## Process to Create a Certificate
+## Process to create a certificate
 
 The process to create a certificate involves the following steps:
 
