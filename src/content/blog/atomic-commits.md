@@ -68,6 +68,8 @@ Think about the change narratives you want to convey to reviewers and future col
 
 Group the changes into a series of commits, each containing a logical change. GUI Git tools like [SourceTree](https://www.sourcetreeapp.com/) or the [source control GUI](https://code.visualstudio.com/docs/sourcecontrol/overview) in Visual Studio Code allows you to stage portions of the same file into different commits. Don't let your preference for the command-line interface hinder you from choosing better tools.
 
+![stage hunk](/stage-hunk.png)
+
 ## 3. Use a standard commit message format
 
 It's important to write commit messages in a standard format to convey the message of what and why the changes were made
