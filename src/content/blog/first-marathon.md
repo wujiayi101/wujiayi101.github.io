@@ -1,5 +1,5 @@
 ---
-title: "My First Marathon"
+title: "My first marathon"
 description: ""
 pubDate: "Feb 4, 2024"
 tags: ["running", "marathon"]

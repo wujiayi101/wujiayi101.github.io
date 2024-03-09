@@ -1,5 +1,5 @@
 ---
-title: "Writing Atomic Commits"
+title: "Writing atomic commits"
 description: ""
 pubDate: "Nov 17, 2023"
 tags: ["git", "code review"]

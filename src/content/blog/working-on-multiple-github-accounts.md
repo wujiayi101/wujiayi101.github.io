@@ -1,5 +1,5 @@
 ---
-title: "Working On Multiple GitHub Accounts"
+title: "Working on multiple GitHub accounts"
 description: ""
 pubDate: "Nov 03, 2023"
 tags: ["git", "tips", "productivity"]
