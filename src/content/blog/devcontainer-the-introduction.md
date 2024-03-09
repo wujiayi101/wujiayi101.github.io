@@ -1,5 +1,5 @@
 ---
-title: "Dev Containers"
+title: "Dev containers"
 description: ""
 pubDate: "Nov 09, 2023"
 tags: ["devcontainers", "vscode", "productivity"]
