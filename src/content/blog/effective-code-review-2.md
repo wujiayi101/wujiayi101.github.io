@@ -110,11 +110,25 @@ We won't go into detail on this here, but here is a quick example:
 >
 > Consider renaming it to `username` for clarity. This can be done in a future PR.
 
-If you write a comment like this, you provide feedback while also telling the author the issue doesn't have to be addressed in this PR. Often times, people receiving feedback are overwhelmed by many feedbacks and they are worried that the reviewers willl be upset if not all feedbacks are addressed.  
+Often times, people receiving feedback are overwhelmed by many feedbacks and they are worried that the reviewers willl be upset if not all feedbacks are addressed. If you write a comment like this, you are sending a clear signal to the author that the issue doesn't have to be addressed in this PR. This will be a big relief for the author who wants to ship the code ASAP.
 
-### 3.8 Approve as soon as no blockers
+Here is another example:
+
+> **bug (blocking)**: this function returns error
+>
+> The input values to the function are incorrect, please refer to the API doc for detail
+
+This comment points out a critical issue. It has to be fixed in this PR unless the author disagree otherwise. 
+
+
+### 3.8 Approve if no more blockers
 
 You should approve the PR as soon as there is no blocker/critical issues in the PR and trust the author will address other issues in the future. This allows the team to move fast and avoid a standoff in a PR feedback loop.
+
+### If the review becomes a standoff
+
+With all the tips provided above, there is still a chance that a review turns into a standoff situation. No one agrees with anyone, and the PR is unable to process further. In this case, it is better for the author to create a live meeting to go through the PR instead of talking via text offline. Discussing via text offline can often cause misunderstanding and can be avoided in a live session.
+
 
 ## Final thoughts
 

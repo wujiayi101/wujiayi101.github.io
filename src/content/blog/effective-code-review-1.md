@@ -54,8 +54,8 @@ This information allows the reviewer to gain a good understanding of the backgro
 
 It is not uncommon to make some obvious mistakes in the PR. For example, you might accidentally push secrets or some temporary changes to the PR. A good practice is to do a self-review before sending it out to your peers. One good way to do this is to use a [draft PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests).
 
-* A draft PR allows the code author to examine the code on the UI.
-* A draft PR usually triggers the GitHub checks (usually automated tests), so we can find out if the changes break anything.
+* A draft PR allows the code author to examine the code from the GitHub UI
+* A draft PR usually triggers GitHub checks, so we can find out if the changes break any automated tests or linting.
 * A draft PR does not spam notifications to the reviewers. 
 
 Once the author thinks everything is ready, you can mark your draft pull request as ready for review, and notification will be sent to the reviewers.
