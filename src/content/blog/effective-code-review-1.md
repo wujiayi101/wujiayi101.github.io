@@ -72,4 +72,4 @@ If it is urgent, don't hold back. You have a good reason to nudge the reviewers 
 
 This post discusses practical tips for requesting a code review. As the requester, it's important to take ownership of the review process and facilitate the work to make it easier for everyone involved to provide feedback.
 
-In the next post, we will explore effective techniques for code reviewers to review and provide feedback.
+In the [next post](/blog/effective-code-review-2/), we will explore effective techniques for code reviewers to review and provide feedback.
