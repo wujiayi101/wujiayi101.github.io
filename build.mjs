@@ -41,7 +41,7 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ''}
 <header class="site-header">
   <a class="site-title" href="/">${esc(SITE_TITLE)}</a>
   <nav>
-    <a href="/">Blog</a>
+    <a href="/blog/">Blog</a>
   </nav>
 </header>
 <main>
@@ -53,6 +53,61 @@ ${body}
 </body>
 </html>
 `;
+}
+
+// Standalone minimal landing page. No site header/footer chrome.
+function homeLayout({ title, description, canonical, body }) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description || SITE_DESCRIPTION)}">
+${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ''}
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="home">
+${body}
+</body>
+</html>
+`;
+}
+
+function renderHome() {
+  return `<main class="home-main">
+  <section class="home-card">
+    <h1 class="home-name">${esc(SITE_TITLE)}</h1>
+    <p class="home-tagline">${esc(SITE_DESCRIPTION)}</p>
+    <nav class="home-nav">
+      <a href="/blog/">Blog</a>
+      <button type="button" class="home-link" id="cv-btn" aria-haspopup="dialog">CV</button>
+      <a href="/rss.xml">RSS</a>
+    </nav>
+  </section>
+
+  <div class="cv-overlay" id="cv-overlay" hidden>
+    <div class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-title">
+      <h2 id="cv-title">CV</h2>
+      <p>Coming soon.</p>
+      <button type="button" class="home-link" id="cv-close">Close</button>
+    </div>
+  </div>
+</main>
+<script>
+(function () {
+  var btn = document.getElementById('cv-btn');
+  var overlay = document.getElementById('cv-overlay');
+  var close = document.getElementById('cv-close');
+  function open() { overlay.hidden = false; close.focus(); }
+  function shut() { overlay.hidden = true; btn.focus(); }
+  btn.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) shut(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) shut(); });
+})();
+</script>`;
 }
 
 function loadPosts() {
@@ -135,15 +190,27 @@ if (existsSync(PUBLIC_DIR)) cpSync(PUBLIC_DIR, OUT_DIR, { recursive: true });
 
 const posts = loadPosts();
 
-// home + /blog both show the index
-const indexHtml = layout({
-  title: SITE_TITLE,
-  description: SITE_DESCRIPTION,
-  canonical: SITE_URL,
-  body: renderIndex(posts),
-});
-write('index.html', indexHtml);
-write('blog/index.html', indexHtml);
+// / = minimal landing page
+write(
+  'index.html',
+  homeLayout({
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    canonical: SITE_URL,
+    body: renderHome(),
+  })
+);
+
+// /blog = post index
+write(
+  'blog/index.html',
+  layout({
+    title: `Blog — ${SITE_TITLE}`,
+    description: SITE_DESCRIPTION,
+    canonical: `${SITE_URL}/blog/`,
+    body: renderIndex(posts),
+  })
+);
 
 for (const p of posts) {
   write(

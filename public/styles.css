@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/space-grotesk-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/space-grotesk-700.woff2") format("woff2");
+}
+
 :root {
   --fg: #1a1a1a;
   --muted: #6b6b6b;
@@ -14,7 +29,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.65;
   color: var(--fg);
@@ -122,3 +137,86 @@ th { background: var(--code-bg); }
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+/* --- minimal landing page --- */
+.home-main {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+.home-card { max-width: 32rem; }
+.home-name {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.home-tagline {
+  margin: 0.9rem 0 1.75rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.home-nav a,
+.home-nav .home-link {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 2px;
+}
+.home-nav a::after,
+.home-nav .home-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+.home-nav a:hover::after,
+.home-nav .home-link:hover::after { transform: scaleX(1); }
+/* button reset for CV trigger / close */
+.home-link {
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--fg);
+}
+
+/* CV modal */
+.cv-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+.cv-overlay[hidden] { display: none; }
+.cv-modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 24rem;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+.cv-modal h2 { margin: 0 0 0.5rem; }
+.cv-modal p { margin: 0 0 1.5rem; color: var(--muted); }
+.cv-modal .home-link { color: var(--accent); }
