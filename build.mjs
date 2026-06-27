@@ -251,7 +251,9 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
       <div class="kv">Mandarin — Native</div>
       <div class="kv">Hokkien / Taiwanese — Native</div>
       <h2>Education</h2>
-      <div class="kv"><b>University of Southampton</b><br>MSc, Web Technology</div>
+      <div class="kv"><b>University of Southampton</b>, UK · 2008–2009<br>MSc, Web Technology — Distinction</div>
+      <div class="kv" style="margin-top:.5rem;"><b>University of Kent</b>, UK · 2007–2008<br>MSc, Computer Science — Merit</div>
+      <div class="kv" style="margin-top:.5rem;"><b>Xiamen University of Technology</b> · 2003–2007<br>BSc, Computer Science &amp; Technology</div>
     </div>
   </div>
 </div>
