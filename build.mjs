@@ -14,6 +14,8 @@ const PUBLIC_DIR = join(root, 'public');
 const OUT_DIR = join(root, 'dist');
 
 const SITE_TITLE = 'Wu Jiayi';
+const SITE_ALIAS = 'Chris';
+const CV_DISPLAY_NAME = `${SITE_TITLE} (${SITE_ALIAS})`;
 const SITE_DESCRIPTION = 'Notes on engineering, running, and other things.';
 const SITE_URL = 'https://wu101.com';
 
@@ -96,8 +98,8 @@ function renderCvPage() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chris Wu — CV</title>
-<meta name="description" content="Chris Wu — Platform & DevOps engineer. Curriculum vitae.">
+<title>${esc(CV_DISPLAY_NAME)} — CV</title>
+<meta name="description" content="${esc(CV_DISPLAY_NAME)} — Platform & DevOps engineer. Curriculum vitae.">
 <link rel="canonical" href="${SITE_URL}/cv/">
 <link rel="icon" href="/favicon.ico">
 <style>
@@ -151,7 +153,7 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
 </div>
 <div class="page">
   <header class="cv">
-    <div class="name">Chris Wu</div>
+    <div class="name">${esc(CV_DISPLAY_NAME)}</div>
     <div class="role">Software Engineer · DevOps · Platform</div>
     <div class="meta">
       <span>Hong Kong SAR</span>
