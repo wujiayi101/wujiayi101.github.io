@@ -239,10 +239,10 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
   <div class="two" style="margin-top:1.4rem;">
     <div>
       <h2 style="margin-top:0;">Certifications</h2>
-      <div class="kv">KCSA — Kubernetes &amp; Cloud Native Security Associate</div>
-      <div class="kv">KCNA — Kubernetes &amp; Cloud Native Associate</div>
-      <div class="kv">CKAD — Certified Kubernetes Application Developer</div>
-      <div class="kv">AWS Certified</div>
+      <div class="kv"><b>Kubernetes &amp; Cloud Native</b><br>KCSA · KCNA · CKAD</div>
+      <div class="kv" style="margin-top:.45rem;"><b>AWS</b><br>Solutions Architect — Professional &amp; Associate · SysOps Administrator — Associate · Developer — Associate</div>
+      <div class="kv" style="margin-top:.45rem;"><b>HashiCorp</b><br>Terraform Associate</div>
+      <div class="kv" style="margin-top:.45rem;"><b>PMI</b><br>Project Management Professional (PMP)</div>
     </div>
     <div>
       <h2 style="margin-top:0;">Languages</h2>
