@@ -236,8 +236,15 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
   <div class="two">
     <div>
       <h2 style="margin-top:0;">Certifications</h2>
-      <div class="kv"><b>Kubernetes &amp; Cloud Native</b><br>KCSA · KCNA · CKAD</div>
-      <div class="kv" style="margin-top:.45rem;"><b>AWS</b><br>Solutions Architect — Professional &amp; Associate · SysOps Administrator — Associate · Developer — Associate</div>
+      <div class="kv"><b>Kubernetes</b><br>KCSA · KCNA · CKAD</div>
+      <div class="kv" style="margin-top:.45rem;"><b>AWS</b>
+        <ul>
+          <li>Solutions Architect — Professional</li>
+          <li>Solutions Architect — Associate</li>
+          <li>SysOps Administrator — Associate</li>
+          <li>Developer — Associate</li>
+        </ul>
+      </div>
       <div class="kv" style="margin-top:.45rem;"><b>HashiCorp</b><br>Terraform Associate</div>
       <div class="kv" style="margin-top:.45rem;"><b>PMI</b><br>Project Management Professional (PMP)</div>
     </div>
