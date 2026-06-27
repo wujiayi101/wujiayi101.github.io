@@ -27,6 +27,9 @@ jobs:
         run: npm ci
 
       - name: Build site
+        # ubuntu-latest ships Google Chrome; build runs gen-cv-pdf.mjs to render dist/cv.pdf
+        env:
+          CHROME_BIN: google-chrome
         run: npm run build
 
       - name: Ensure Cloudflare Pages project exists

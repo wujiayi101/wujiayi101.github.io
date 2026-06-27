@@ -167,16 +167,14 @@ th { background: var(--code-bg); }
   gap: 1.5rem;
   align-items: center;
 }
-.home-nav a,
-.home-nav .home-link {
+.home-nav a {
   color: var(--fg);
   text-decoration: none;
   font-weight: 600;
   position: relative;
   padding-bottom: 2px;
 }
-.home-nav a::after,
-.home-nav .home-link::after {
+.home-nav a::after {
   content: "";
   position: absolute;
   left: 0; bottom: 0;
@@ -186,37 +184,4 @@ th { background: var(--code-bg); }
   transform-origin: left;
   transition: transform 0.18s ease;
 }
-.home-nav a:hover::after,
-.home-nav .home-link:hover::after { transform: scaleX(1); }
-/* button reset for CV trigger / close */
-.home-link {
-  font: inherit;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  color: var(--fg);
-}
-
-/* CV modal */
-.cv-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem;
-  background: rgba(0, 0, 0, 0.4);
-}
-.cv-overlay[hidden] { display: none; }
-.cv-modal {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 24rem;
-  width: 100%;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-}
-.cv-modal h2 { margin: 0 0 0.5rem; }
-.cv-modal p { margin: 0 0 1.5rem; color: var(--muted); }
-.cv-modal .home-link { color: var(--accent); }
+.home-nav a:hover::after { transform: scaleX(1); }

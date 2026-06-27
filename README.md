@@ -8,9 +8,12 @@ script ([`build.mjs`](./build.mjs)) turns Markdown into static HTML.
 - **Content**: Markdown with frontmatter in [`content/blog/`](./content/blog/)
 - **Assets**: static files in [`public/`](./public/) (copied verbatim to `dist/`)
 - **Styling**: a single stylesheet, [`public/styles.css`](./public/styles.css)
-- **Output**: static `dist/` — minimal landing `/`, blog index `/blog/`, per-post `/blog/<slug>/`, plus `rss.xml`
+- **Output**: static `dist/` — minimal landing `/`, CV page `/cv/` (+ downloadable `/cv.pdf`), blog index `/blog/`, per-post `/blog/<slug>/`, plus `rss.xml`
 - **Deps**: just [`marked`](https://github.com/markedjs/marked) (Markdown) and
   [`gray-matter`](https://github.com/jonschlinkert/gray-matter) (frontmatter)
+- **CV PDF**: `/cv.pdf` is rendered from the `/cv/` page at build time by
+  [`gen-cv-pdf.mjs`](./gen-cv-pdf.mjs) using system Chrome (no npm dep). Build
+  skips it gracefully if no Chrome is found; set `CHROME_BIN` to point at one.
 
 ## Commands
 
