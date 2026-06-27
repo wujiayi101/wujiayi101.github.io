@@ -16,7 +16,7 @@ const OUT_DIR = join(root, 'dist');
 const SITE_TITLE = 'Wu Jiayi';
 const SITE_ALIAS = 'Chris';
 const CV_DISPLAY_NAME = `${SITE_TITLE} (${SITE_ALIAS})`;
-const SITE_DESCRIPTION = 'Notes on engineering, running, and other things.';
+const SITE_DESCRIPTION = 'Notes on software, running, and other things.';
 const SITE_URL = 'https://wu101.com';
 
 const marked = new Marked({ gfm: true, breaks: false });
@@ -195,7 +195,7 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
       </div>
       <div class="job">
         <div class="job-head"><span class="job-title">Lead Quality Assurance Developer</span><span class="job-date">Nov 2016 – Jan 2019</span></div>
-        <ul><li>Led a global team of 10+ QA engineers building automated tests across 5 platforms, cutting manual testing time by 90%.</li></ul>
+        <ul><li>Led a global team of 10+ QA engineers building automated tests across 5 client apps, cutting manual testing time by 90%.</li></ul>
       </div>
     </div>
   </div>
