@@ -1,7 +1,7 @@
 # wu101.com
 
-Personal site / blog. Minimal static generator — no framework. ~140 lines of
-Node ([`build.mjs`](./build.mjs)) turn Markdown into static HTML.
+Personal site / blog. Minimal static generator — no framework. A small Node
+script ([`build.mjs`](./build.mjs)) turns Markdown into static HTML.
 
 **Live:** [wu101.com](https://wu101.com) (Cloudflare Pages — also at [wu101.pages.dev](https://wu101.pages.dev))
 
@@ -12,7 +12,7 @@ Node ([`build.mjs`](./build.mjs)) turn Markdown into static HTML.
 - **Deps**: just [`marked`](https://github.com/markedjs/marked) (Markdown) and
   [`gray-matter`](https://github.com/jonschlinkert/gray-matter) (frontmatter)
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -43,10 +43,11 @@ The filename (minus `.md`) becomes the URL slug: `/blog/<filename>/`.
 ## Deployment
 
 Pushing to `main` triggers [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml),
-which builds and deploys to **Cloudflare Pages** (project `wu101`).
+which builds and deploys to **Cloudflare Pages** (project `wu101`). The workflow
+creates the Pages project automatically on first run if it doesn't exist yet.
 
-- **Production domain:** [wu101.com](https://wu101.com) (custom domain, set in the Cloudflare Pages project)
-- **Default URL:** [wu101.pages.dev](https://wu101.pages.dev)
+- **Production domain:** [wu101.com](https://wu101.com) — custom domain, attached once in the Cloudflare Pages dashboard (Pages project → Custom domains)
+- **Default URL:** [wu101.pages.dev](https://wu101.pages.dev) — live immediately after the first deploy
 
 Requires two GitHub repository secrets:
 
