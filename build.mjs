@@ -231,12 +231,7 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
     <ul><li>Developed software for freight and logistics operations.</li></ul>
   </div>
 
-  <h2>Skills</h2>
-  <div class="chips">
-    <span class="chip">Platform Engineering</span><span class="chip">DevOps</span><span class="chip">Kubernetes (AWS &amp; GCP)</span><span class="chip">Observability</span><span class="chip">CI/CD &amp; Release Automation</span><span class="chip">Golden Paths</span><span class="chip">Self-Service Tooling</span><span class="chip">Security by Default</span><span class="chip">Microservices</span><span class="chip">Cloudflare</span><span class="chip">Infrastructure as Code</span><span class="chip">Cost Optimization</span>
-  </div>
-
-  <div class="two" style="margin-top:1.4rem;">
+  <div class="two">
     <div>
       <h2 style="margin-top:0;">Certifications</h2>
       <div class="kv"><b>Kubernetes &amp; Cloud Native</b><br>KCSA · KCNA · CKAD</div>
