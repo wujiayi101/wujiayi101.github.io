@@ -83,7 +83,6 @@ function renderHome() {
     <nav class="home-nav">
       <a href="/blog/">Blog</a>
       <button type="button" class="home-link" id="cv-btn" aria-haspopup="dialog">CV</button>
-      <a href="/rss.xml">RSS</a>
     </nav>
   </section>
 
