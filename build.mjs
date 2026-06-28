@@ -122,6 +122,9 @@ header.cv{border-bottom:2px solid var(--fg);padding-bottom:1.4rem;margin-bottom:
 .meta{margin-top:.6rem;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.3rem 1rem;}
 .meta a{color:var(--muted);text-decoration:none;}
 .summary{font-size:.98rem;margin-bottom:1.8rem;color:#333;}
+.summary p{margin:.85rem 0;}
+.summary p:first-child{margin-top:0;}
+.summary p:last-child{margin-bottom:0;}
 h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:1.7rem 0 .9rem;font-weight:700;}
 .job{margin-bottom:1.15rem;page-break-inside:avoid;}
 .job-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;}
@@ -162,7 +165,12 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
     </div>
   </header>
 
-  <p class="summary">Platform &amp; DevOps engineer with 15 years across global enterprises, scaling product companies, and fast-moving startups. I build the things that make everyone else fast — golden paths, self-service tooling, guardrails, and security baked in by default. I keep production healthy on Kubernetes across AWS and GCP, and I&rsquo;m a little obsessed with observability: seeing the whole system at once and catching strain before it becomes an incident. The best work I do is the kind nobody notices — the team just ships better because the platform underneath works.</p>
+  <div class="summary">
+    <p>Platform &amp; DevOps engineer, 15 years across wildly different rooms — global enterprise, scaling product companies, fast-moving startups. I&rsquo;ve worked as a developer, led QA at scale, and moved into platform, a natural place where those experiences meet. That breadth gives me a well-rounded view of how teams ship: what helps people move fast, where friction shows up, and what developer experience actually needs to work.</p>
+    <p>I build things that make everyone else fast — golden paths, self-service tooling, guardrails, security baked in by default. I keep production healthy across AWS and GCP on Kubernetes — certified on both (KCSA, CKAD, and AWS). I&rsquo;m a little obsessed with observability: I like being the person who can see the whole system at once and catch the strain before it becomes an incident. That bird&rsquo;s-eye view is the part of the job I find genuinely satisfying.</p>
+    <p>Best work I do is the kind nobody notices — the team just ships better because the platform under them works.</p>
+    <p>Off the clock: gym, marathon running, and always a book on the go.</p>
+  </div>
 
   <h2>Experience</h2>
 
