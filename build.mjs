@@ -139,26 +139,10 @@ li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;bo
 .kv{font-size:.9rem;margin:.2rem 0;}
 .kv b{font-weight:600;}
 @media print{
-  body{background:#fff;font-size:9pt;line-height:1.35;}
+  body{background:#fff;}
   .bar{display:none;}
   .page{margin:0;max-width:none;box-shadow:none;padding:0;}
-  .name{font-size:1.75rem;}
-  .role{font-size:.92rem;margin-top:.35rem;}
-  .meta{font-size:.78rem;margin-top:.4rem;}
-  header.cv{padding-bottom:.75rem;margin-bottom:.85rem;}
-  .summary{font-size:.84rem;margin-bottom:.9rem;}
-  .summary p{margin:.45rem 0;}
-  h2{font-size:.72rem;margin:1rem 0 .55rem;}
-  .job{margin-bottom:.55rem;}
-  .job-title{font-size:.92rem;}
-  .job-date,.job-loc{font-size:.76rem;}
-  ul{margin:.25rem 0 0;}
-  li{font-size:.82rem;margin:.15rem 0;padding-left:.95rem;}
-  li::before{top:.55em;width:4px;height:4px;}
-  .sub{margin-left:.85rem;padding-left:.85rem;}
-  .kv{font-size:.82rem;margin:.12rem 0;}
-  .two{gap:.2rem 1.25rem;}
-  @page{size:A4;margin:10mm 12mm;}
+  @page{size:A4;margin:14mm 15mm;}
 }
 </style>
 </head>

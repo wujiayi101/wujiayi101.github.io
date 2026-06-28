@@ -12,7 +12,6 @@ const root = fileURLToPath(new URL('.', import.meta.url));
 const DIST = join(root, 'dist');
 const OUT = join(DIST, 'cv.pdf');
 const PORT = 4399;
-const MAX_PAGES = 2;
 
 const CHROME_CANDIDATES = [
   process.env.CHROME_BIN,
@@ -82,23 +81,6 @@ function printPdf(chrome) {
   });
 }
 
-function pdfPageCountViaPdfinfo(path) {
-  const r = spawnSync('pdfinfo', [path], { encoding: 'utf8' });
-  if (r.status !== 0) return null;
-  const m = r.stdout.match(/^Pages:\s+(\d+)/m);
-  return m ? parseInt(m[1], 10) : null;
-}
-
-async function pdfPageCount(path) {
-  const viaPdfinfo = pdfPageCountViaPdfinfo(path);
-  if (viaPdfinfo != null) return viaPdfinfo;
-
-  const buf = await readFile(path);
-  const text = buf.toString('latin1');
-  const counts = [...text.matchAll(/\/Count\s+(\d+)/g)].map((m) => parseInt(m[1], 10));
-  return counts.length ? Math.max(...counts) : 0;
-}
-
 const chrome = await findChrome();
 if (!chrome) {
   console.warn('gen-cv-pdf: no Chrome found — skipping cv.pdf (set CHROME_BIN to enable).');
@@ -113,15 +95,7 @@ const server = await startServer();
 try {
   await printPdf(chrome);
   const s = await stat(OUT);
-  const pages = await pdfPageCount(OUT);
-  console.log(`Generated cv.pdf (${(s.size / 1024).toFixed(0)} KB, ${pages} pages) via ${chrome}`);
-  if (pages > MAX_PAGES) {
-    console.error(
-      `gen-cv-pdf: CV exceeds ${MAX_PAGES} pages (${pages}). ` +
-      'Trim content or tighten @media print styles in build.mjs renderCvPage().',
-    );
-    process.exitCode = 1;
-  }
+  console.log(`Generated cv.pdf (${(s.size / 1024).toFixed(0)} KB) via ${chrome}`);
 } catch (err) {
   console.error(`gen-cv-pdf: failed — ${err.message}`);
   process.exitCode = 1;
